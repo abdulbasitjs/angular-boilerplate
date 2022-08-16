@@ -5,6 +5,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   template: `
     <app-header></app-header>
     <section>THis is dashboard section</section>
+    <app-sidebar></app-sidebar>
     <router-outlet></router-outlet>
   `,
   styles: [

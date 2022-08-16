@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.co
     FooterComponent,
     AuthLayoutComponent,
     DashboardLayoutComponent,
+    SidebarComponent
   ],
   imports: [CommonModule, CoreModule, RouterModule],
   exports: [
@@ -21,6 +23,7 @@ import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.co
     FooterComponent,
     AuthLayoutComponent,
     DashboardLayoutComponent,
+    SidebarComponent
   ],
 })
 export class LayoutModule {}
