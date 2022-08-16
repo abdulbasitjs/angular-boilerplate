@@ -1,0 +1,46 @@
+// Project Level Variables
+// Fonts
+$font-weights: (
+  "thin": 100,
+  "thin-200": 200,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "black": 900,
+);
+
+@function font-weight($font-weight-style) {
+  @return map-get($font-weights, $font-weight-style);
+}
+
+$font-sizes: (
+  "small": 1.1rem,
+  "smallFix": 1.2rem,
+  "regular": calc(1.3rem + 0.1389vw),
+  "regularFix": calc(1.4rem),
+  "normal": 1.6rem,
+  "normalFix": 1.8rem,
+  "medium": calc(1.8rem + 0.1389vw),
+  "largeFix": 2.4rem,
+  "large": calc(2.5rem + 0.15vw),
+  "xl": 3rem,
+  "xxl": 4rem,
+);
+
+@function font-size($font-size-style) {
+  @return map-get($font-sizes, $font-size-style);
+}
+
+$break-points: (
+  "break-point-small": 400px,
+  "break-point-medium": 600px,
+  "break-point-tablet": 800px,
+  "break-point-custom-tablet": 1100px,
+  "break-point-desktop": 1300px,
+  "break-point-desktop-hd": 1450px,
+);
+
+@function break-point($key) {
+  @return map-get($break-points, "break-point-" + $key);
+}
