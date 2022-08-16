@@ -1,0 +1,7 @@
+ng g c auth-layout --project=console --module=forgot.module.ts
+--style=scss --change-detection=OnPush --flat --inline-style
+--inline-template --path=src/app/modules/auth/pages/forgot
+--selector=app-auth-forgot --skip-tests --no-interactive
+
+ng g c auth-layout --project=console --style=scss --change-detection=OnPush --flat --inline-style --inline-template --path=src/app/layout/auth-layout --selector=app-auth-layout --skip-tests --no-interactive
+
