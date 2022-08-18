@@ -2,21 +2,19 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard-layout',
+  host: {
+    class: 'content',
+  },
   template: `
     <app-header></app-header>
-    <section>THis is dashboard section</section>
-    <app-sidebar></app-sidebar>
-    <router-outlet></router-outlet>
+    <mat-sidebar></mat-sidebar>
+    <!-- <router-outlet></router-outlet> -->
   `,
-  styles: [
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardLayoutComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

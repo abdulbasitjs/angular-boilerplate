@@ -8,11 +8,11 @@ const routes: Routes = [
     path: '',
     component: SnetMainComponent,
     children: [
-      { path: '', redirectTo: '/snxc/snet/stats', pathMatch: 'full' },
+      { path: '', redirectTo: '/snxc/snet/total-stats', pathMatch: 'full' },
       {
-        path: 'stats',
+        path: 'total-stats',
         loadChildren: () =>
-          import('./pages/snet-stats/snet-stats.module').then((m) => m.SnetStatsModule),
+          import('./pages/snet-total-stats/snet-total-stats.module').then((m) => m.SnetTotalStatsModule),
       },
       {
         path: 'detection',

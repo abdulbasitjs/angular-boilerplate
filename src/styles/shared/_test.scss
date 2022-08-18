@@ -1,0 +1,47 @@
+@use "@angular/material/" as mat;
+
+@mixin test-theme($theme) {
+  $theme-colors: mat.get-color-config($theme);
+  $success-color-pallete: map-get($theme-colors, success);
+  $info-color-pallete: map-get($theme-colors, info);
+  $warn-color-pallete: map-get($theme-colors, warn);
+  $backgrounds: map-get($theme-colors, background);
+
+  .test {
+    background-color: mat.get-color-from-palette($backgrounds, card);
+
+    &.success {
+      background-color: mat.get-color-from-palette(
+        $success-color-pallete,
+        lighter
+      );
+    }
+    &.info {
+      background-color: mat.get-color-from-palette(
+        $info-color-pallete,
+        lighter
+      );
+    }
+    &.warn {
+      background-color: mat.get-color-from-palette(
+        $warn-color-pallete,
+        lighter
+      );
+    }
+  }
+}
+
+.test {
+  padding: 5px 15px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  display: block;
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .message {
+    font-size: 16px;
+  }
+}

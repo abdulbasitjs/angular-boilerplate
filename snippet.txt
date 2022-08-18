@@ -5,3 +5,4 @@ ng g c auth-layout --project=console --module=forgot.module.ts
 
 ng g c auth-layout --project=console --style=scss --change-detection=OnPush --flat --inline-style --inline-template --path=src/app/layout/auth-layout --selector=app-auth-layout --skip-tests --no-interactive
 
+   "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",

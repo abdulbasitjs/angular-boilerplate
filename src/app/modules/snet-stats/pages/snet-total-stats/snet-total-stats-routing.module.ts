@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SnetStatsComponent } from './snet-stats.component';
+import { SnetTotalStatsComponent } from './snet-total-stats.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: SnetStatsComponent,
+    component: SnetTotalStatsComponent,
   },
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SnetStatsRoutingModule {}
+export class SnetTotalStatsRoutingModule {}

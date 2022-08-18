@@ -14,11 +14,11 @@ const routes: Routes = [
     path: '',
     component: DashboardLayoutComponent,
     children: [
-      { path: '', redirectTo: `/snxc/${SNET_KEY}`, pathMatch: 'full' },
+      { path: '', redirectTo: `/snxc/${SNET_KEY}/total-stats`, pathMatch: 'full' },
       {
         path: SNET_KEY,
         loadChildren: () =>
-          import('../snet/snet.module').then((m) => m.SnetModule),
+          import('../snet-stats/snet.module').then((m) => m.SnetModule),
       },
       {
         path: DOMAIN_LISTING_KEY,
