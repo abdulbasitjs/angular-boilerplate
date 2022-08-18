@@ -7,6 +7,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
       <mat-sidenav id="sidenav" #sideNav mode="push" opened="true">
         <app-sidebar></app-sidebar>
       </mat-sidenav>
+
       <mat-sidenav-content>
         <router-outlet></router-outlet>
       </mat-sidenav-content>
