@@ -6,6 +6,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   exports: [
@@ -16,6 +18,8 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatCardModule,
     MatListModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
 })
 export class SharedMaterialModule {}

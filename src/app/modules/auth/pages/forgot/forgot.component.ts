@@ -2,20 +2,12 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-auth-forgot',
-  template: `
-    <p>
-      forgot works!
-    </p>
-  `,
-  styles: [
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  template: ` <auth-forgot-container></auth-forgot-container> `,
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ForgotComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

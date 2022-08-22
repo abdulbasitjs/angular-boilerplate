@@ -20,7 +20,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatSidebarComponent,
     SidebarComponent,
   ],
-  imports: [CommonModule, CoreModule, RouterModule, SharedMaterialModule],
+  imports: [CommonModule, CoreModule, RouterModule],
   exports: [
     HeaderComponent,
     FooterComponent,

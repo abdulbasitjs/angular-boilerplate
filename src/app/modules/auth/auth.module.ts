@@ -4,13 +4,9 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LayoutModule } from 'src/app/layout/layout.module';
 
-
 @NgModule({
-  declarations: [  ],
-  imports: [
-    CommonModule,
-    AuthRoutingModule,
-    LayoutModule
-  ]
+  declarations: [],
+  exports: [],
+  imports: [CommonModule, AuthRoutingModule, LayoutModule],
 })
-export class AuthModule { }
+export class AuthModule {}

@@ -1,20 +1,12 @@
 // Theme Configurations
 @use "@angular/material/" as mat;
-@use "../shared/test" as banner;
-@use "./utilities" as root;
 @use "sass:map";
+@import "./variables";
+// @use "../shared/test" as banner;
 
 @include mat.core();
 
-$snx-primary: mat.define-palette(mat.$orange-palette, 500, 200, 800);
-$snx-accent: mat.define-palette(mat.$pink-palette);
-$snx-warn: mat.define-palette(mat.$red-palette);
 
-// Extra Colors
-$snx-success: mat.define-palette(mat.$green-palette);
-$snx-info: mat.define-palette(mat.$orange-palette);
-
-// Add typography if we need
 $snx-theme: mat.define-light-theme(
   (
     color: (
@@ -25,18 +17,18 @@ $snx-theme: mat.define-light-theme(
   )
 );
 
-$snx-theme: map.deep-merge(
-  $snx-theme,
-  (
-    success: $snx-success,
-    info: $snx-info,
-    color: (
-      success: $snx-success,
-      info: $snx-info,
-    ),
-  )
-);
+// $snx-theme: map.deep-merge(
+//   $snx-theme,
+//   (
+//     success: $snx-success,
+//     info: $snx-info,
+//     color: (
+//       success: $snx-success,
+//       info: $snx-info,
+//     ),
+//   )
+// );
 
 @include mat.all-component-themes($snx-theme);
-@include banner.test-theme($snx-theme);
-@include root.app-root-theme($snx-theme);
+// @include banner.test-theme($snx-theme);
+// @include root.app-root-theme($snx-theme);
