@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 @Component({
   selector: 'mat-sidebar',
   template: `
-    <mat-sidenav-container>
+    <!-- <mat-sidenav-container>
       <mat-sidenav id="sidenav" #sideNav mode="push" opened="true">
         <app-sidebar></app-sidebar>
       </mat-sidenav>
@@ -11,7 +11,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
       <mat-sidenav-content>
         <router-outlet></router-outlet>
       </mat-sidenav-content>
-    </mat-sidenav-container>
+    </mat-sidenav-container> -->
   `,
   styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,

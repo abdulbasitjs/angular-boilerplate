@@ -23,17 +23,7 @@ body {
   line-height: 1.9;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
-}
-
-// .mat-form-field, .mat-form-field {
-//   width: 100%;
-//   margin-bottom: 10px;
-// }
+// ********* Width Classes ****** //
 
 $spaceamounts: (
   5,
@@ -63,3 +53,32 @@ $spaceamounts: (
     width: #{$space}#{'%'};
   }
 }
+
+// *********** Margin & Padding Classes *********** //
+
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  @if $space == 0 {
+    .m-0 {
+      margin: 0 !important;
+    }
+
+    .p-0 {
+      padding: 0 !important;
+    }
+  } @else {
+    @each $side in $sides {
+      .m#{str-slice($side, 0, 1)}-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+
+      .p#{str-slice($side, 0, 1)}-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+}
+
+

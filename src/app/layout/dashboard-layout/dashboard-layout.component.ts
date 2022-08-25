@@ -2,12 +2,9 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard-layout',
-  host: {
-    class: 'content',
-  },
   template: `
     <app-header></app-header>
-    <mat-sidebar></mat-sidebar>
+    <!-- <mat-sidebar></mat-sidebar> -->
     <!-- <router-outlet></router-outlet> -->
   `,
   styles: [],

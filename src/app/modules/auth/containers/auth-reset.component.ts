@@ -10,25 +10,22 @@ import { ErrorStateMatcher } from '@angular/material/core';
 import { AUTH } from '@configs/ui/messages';
 
 @Component({
-  selector: 'auth-forgot-container',
+  selector: 'auth-reset-container',
   template: `
     <mat-card class="section-form">
       <div class="form-header">
-        <!-- <div class="header-back mb-25 pointer" routerLink="../">
-          <mat-icon>keyboard_backspace</mat-icon>
-          <h1 class="mat-subheading-2 m-0 ml-10">Sign In</h1>
-        </div> -->
-        <div class="header-title">
-          <h1 class="mat-display-1 m-0">Forgot Password</h1>
-          <p class="mat-subheading-2">Please enter your email address</p>
-        </div>
+      <div class="header-title">
+        <h1 class="mat-display-1 m-0">New Password</h1>
+        <p class="mat-subheading-2">Enter your new password below</p>
+      </div>
+
       </div>
 
       <form class="auth-form w-100">
         <div class="form-field w-100">
-          <mat-label>Email</mat-label>
+          <mat-label>New Password</mat-label>
           <mat-form-field appearance="outline" class="w-100">
-            <mat-icon matPrefix>person</mat-icon>
+            <mat-icon matPrefix>lock</mat-icon>
             <input
               type="email"
               matInput
@@ -49,16 +46,38 @@ import { AUTH } from '@configs/ui/messages';
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="w-100">
-          <button mat-raised-button color="primary" class="w-100 mb-10">SUBMIT</button>
-          <button mat-stroked-button color="primary" class="w-100" routerLink="../">Back to Sign In</button>
+        <div class="form-field w-100">
+          <mat-label>Confirm Password</mat-label>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-icon matPrefix>lock</mat-icon>
+            <input
+              type="email"
+              matInput
+              [formControl]="emailFormControl"
+              [errorStateMatcher]="matcher"
+              placeholder="abc@snx.com"
+            />
+            <mat-error
+              *ngIf="
+                emailFormControl.hasError('email') &&
+                !emailFormControl.hasError('required')
+              "
+            >
+              {{ AUTH.LOGIN.INVALID_EMAIL }}
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              {{ AUTH.LOGIN.EMPTY_EMAIL }}
+            </mat-error>
+          </mat-form-field>
         </div>
+        <div class="forgot-password"></div>
+        <button mat-raised-button color="primary" class="w-100">SUBMIT</button>
       </form>
     </mat-card>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AuthForgotContainer {
+export class AuthResetContainer {
   AUTH = AUTH;
   emailFormControl = new FormControl('', [
     Validators.required,

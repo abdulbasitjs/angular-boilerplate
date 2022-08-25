@@ -8,7 +8,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-
+import { MatMenuModule } from '@angular/material/menu';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { MatDividerModule } from '@angular/material/divider';
 @NgModule({
   exports: [
     MatButtonModule,
@@ -19,7 +21,10 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,
     MatListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatMenuModule,
+    OverlayModule,
+    MatDividerModule
   ],
 })
 export class SharedMaterialModule {}
